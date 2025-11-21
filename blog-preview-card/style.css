@@ -29,28 +29,29 @@ body {
 .card_ctn {
     background-color: var(--white);
     border-radius: 20px;
+    border: 1px solid black;
     box-shadow: 10px 10px rgba(0, 0, 1, 1);
-    max-width: 375px;
+    max-width: 384px;
     overflow: hidden;
-    padding: 16px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
 }
 
 @media screen and (max-width: 500px) {
     .card_ctn {
-        max-width: 95%;
-        min-height: 550px;
-    }
-
-    .card_img img {
-        width: 100%;
-        height: auto;
+        max-width: 327px;
     }
 }
 
 .card_img {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+}
+
+.card_img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .card_content {
@@ -60,21 +61,28 @@ body {
 .label {
     background-color: var(--yellow);
     width: 75px;
-    padding: 5px;
-    border-radius: 3px;
-    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
     text-align: center;
-    font-weight: bolder;
-    margin-bottom: 10px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--gray950);
 }
 
 .publish_date {
-    font-size: 13px;
-    margin-bottom: 10px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: var(--gray950);
 }
 
 .title {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.5;
+    color: var(--gray950);
 }
 
 .title:hover {
@@ -84,8 +92,22 @@ body {
 
 .text {
     color: var(--gray500);
-    line-height: 1.2;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 500px) {
+    .title {
+        font-size: 24px;
+    }
+    .text {
+        font-size: 16px;
+    }
+    .publish_date {
+        font-size: 14px;
+    }
 }
 
 .author {
@@ -96,9 +118,15 @@ body {
 
 .author img {
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+}
+
+.name {
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--gray950);
 }
 
 
