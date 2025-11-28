@@ -134,12 +134,111 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 15%;
+    box-sizing: border-box;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 380px;
+}
+
+.form-input p {
+    font-size: 12px;
+    color: var(--purple-950);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.form-input input {
+    padding: 12px 15px;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    color: var(--purple-950);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-input input::placeholder {
+    color: var(--gray-400);
+}
+
+.form-input input:focus {
+    border: 1px solid transparent;
+    background: 
+        linear-gradient(var(--white), var(--white)) padding-box,
+        linear-gradient(to right, var(--gradient-start), var(--gradient-end)) border-box;
 }
 
 .card-footer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    gap: 15px;
+    width: 380px;
+}
+
+.exp-date-input {
+    flex: 1;
+    width: auto;
+}
+
+.exp-date-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.exp-date-fields input {
+    width: 70px;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    color: var(--purple-950);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.exp-date-fields input::placeholder {
+    color: var(--gray-400);
+}
+
+.exp-date-fields input:focus {
+    border: 1px solid transparent;
+    background: 
+        linear-gradient(var(--white), var(--white)) padding-box,
+        linear-gradient(to right, var(--gradient-start), var(--gradient-end)) border-box;
+}
+
+.cvc-input {
+    flex: 1;
+    width: auto;
+}
+
+.cvc-input input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.confirm-btn {
+    width: 380px;
+    padding: 15px;
+    background: var(--purple-950);
+    color: var(--white);
+    text-align: center;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.confirm-btn:hover {
+    opacity: 0.9;
 }
