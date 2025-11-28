@@ -5,47 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
+  <script src="main.js"></script>
+  <main>
+    <div class="bg-main"></div>
+    <div class="card-img">
+      <div class="card-front">
+        <img src="./images/bg-card-front.png" alt="Card Front">
+          <div class="full-circle"></div>
+          <div class="hollow-circle"></div>
+          <div class="card-number-display">0000 0000 0000 0000</div>
+          <div class="cardholder-name-display">Jane Appleseed</div>
+          <div class="exp-date-display">00/00</div>
+      </div>  
+      <div class="card-back">
+        <img src="./images/bg-card-back.png" alt="Card Back">
+        <div class="cvc-display">000</div>
+      </div>
+    </div>
+    <div class="card-form">
+      <div class="form-input">
+        <p>CARDHOLDER NAME</p>
+        <input type="text" id="cardholder-name" placeholder="Jane Appleseed" maxlength="30">
+      </div>
+      <div class="form-input">
+        <p>CARD NUMBER</p>
+        <input type="text" id="card-number" placeholder="1234 5678 9123 0000" maxlength="19">
+      </div>
+      <div class="card-footer">
+        <div class="form-input exp-date-input">
+          <p>EXP. DATE (MM/YY)</p>
+          <div class="exp-date-fields">
+            <input type="text" id="exp-month" placeholder="MM" maxlength="2">
+            <input type="text" id="exp-year" placeholder="YY" maxlength="2">
+          </div>
+        </div>
+        <div class="form-input cvc-input">
+          <p>CVC</p>
+          <input type="text" id="cvc" placeholder="123" maxlength="3">
+        </div>
+      </div>
+      <div class="confirm-btn">Confirm</div>
+    </div>
+  </main>
 
   <!-- Completed state start -->
 
   Thank you!
   We've added your card details
   Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>

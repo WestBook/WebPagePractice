@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+    /* Primary */
+    --gradient-start: hsl(249, 99%, 64%);
+    --gradient-end: hsl(278, 94%, 30%);
+    --red-400: hsl(0, 100%, 66%);
+
+    /* Neutral */
+    --white: hsl(0, 100%, 100%);
+    --gray-200: hsl(270, 3%, 87%);
+    --gray-400: hsl(212, 12%, 71%);
+    --purple-950: hsl(278, 68%, 11%);
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-main {
+    background: url(./images/bg-main-desktop.png) no-repeat center center;
+    background-size: cover;
+    width: 35vw;
+    height: 100vh;
+}
+
+.card-img {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+}
+
+.card-form {
+    background-color: var(--white);
+    width: 65vw;
+    height: 100vh;
+}
+
+.card-front {
+    position: relative;
+    display: inline-block;
+    transform: translate(-5rem);
+}
+
+.card-front img {
+    display: block;
+    width: 100%;
+}
+
+.full-circle {
+    position: absolute;
+    top: 13%;
+    left: 7%;
+    width: 10%;
+    height: 18%;
+    background: var(--white);
+    border-radius: 50%;
+}
+
+.hollow-circle {
+    position: absolute;
+    top: 18%;
+    left: 20%;
+    width: 4%;
+    height: 8%;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.card-number-display {
+    position: absolute;
+    bottom: 23%;
+    left: 6%;
+    color: var(--white);
+    font-size: clamp(12px, 2.5vw, 28px);
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+}
+
+.cardholder-name-display {
+    position: absolute;
+    bottom: 10%;
+    left: 6%;
+    color: var(--white);
+    font-size: clamp(10px, 1.5vw, 12px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.exp-date-display {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    color: var(--white);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.card-back {
+    position: relative;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.card-back img {
+    display: block;
+    width: 100%;
+}
+
+.cvc-display {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    color: var(--white);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.card-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
