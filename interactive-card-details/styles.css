@@ -37,21 +37,18 @@ main {
 .card-img {
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 35%;
     transform: translate(-50%, -50%);
-    width: 40vw;
-}
-
-.card-form {
-    background-color: var(--white);
-    width: 65vw;
-    height: 100vh;
+    width: 30vw;
+    z-index: 10;
+    pointer-events: none;
 }
 
 .card-front {
     position: relative;
     display: inline-block;
     transform: translate(-5rem);
+    pointer-events: auto;
 }
 
 .card-front img {
@@ -85,7 +82,7 @@ main {
     bottom: 23%;
     left: 6%;
     color: var(--white);
-    font-size: clamp(12px, 2.5vw, 28px);
+    font-size: clamp(16px, 2.5vw, 28px);
     font-weight: 500;
     letter-spacing: 0.2rem;
 }
@@ -130,13 +127,15 @@ main {
     letter-spacing: 2px;
 }
 
-.card-form {
+.card-form, .success-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding-left: 15%;
+    align-items: center;
     box-sizing: border-box;
+    background-color: var(--white);
+    width: 65vw;
+    height: 100vh;
 }
 
 .form-input {
@@ -226,7 +225,7 @@ main {
     box-sizing: border-box;
 }
 
-.confirm-btn {
+.btn {
     width: 380px;
     padding: 15px;
     background: var(--purple-950);
@@ -239,6 +238,89 @@ main {
     transition: opacity 0.3s ease;
 }
 
-.confirm-btn:hover {
+.btn:hover {
     opacity: 0.9;
+}
+
+/* Error states */
+.error-message {
+    color: var(--red-400);
+    font-size: 12px;
+    margin-top: 8px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.form-input input.error {
+    border: 1px solid var(--red-400);
+}
+
+.exp-date-fields input.error {
+    border: 1px solid var(--red-400);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 20px 0 10px 0;
+}
+
+.detail {
+    font-size: 16px;
+    color: var(--gray-400);
+    margin: 0 0 30px 0;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .bg-main {
+        width: 100vw;
+        height: 35vh;
+    }
+
+    .card-img {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+    }
+
+    .card-form, .success-form {
+        width: 100vw;
+        height: auto;
+        padding: 0px 20px;
+        flex: 1;
+    }
+
+    .form-input {
+        width: 100%;
+    }
+
+    .card-footer {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 20px 0px;
+    }
+
+    .card-front {
+        width: 75vw;
+        transform: translate(10px, 120px);
+    }
+    
+    .card-back {
+        width: 75vw;
+        transform: translate(80px, -160px);
+        z-index: -1;
+    }
 }

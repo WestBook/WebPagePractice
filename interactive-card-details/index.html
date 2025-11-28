@@ -9,7 +9,6 @@
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
 <body>
-  <script src="main.js"></script>
   <main>
     <div class="bg-main"></div>
     <div class="card-img">
@@ -29,11 +28,13 @@
     <div class="card-form">
       <div class="form-input">
         <p>CARDHOLDER NAME</p>
-        <input type="text" id="cardholder-name" placeholder="Jane Appleseed" maxlength="30">
+        <input type="text" id="cardholder-name" placeholder="e.g. Jane Appleseed" maxlength="30">
+        <span class="error-message" id="name-error"></span>
       </div>
       <div class="form-input">
         <p>CARD NUMBER</p>
-        <input type="text" id="card-number" placeholder="1234 5678 9123 0000" maxlength="19">
+        <input type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+        <span class="error-message" id="card-error"></span>
       </div>
       <div class="card-footer">
         <div class="form-input exp-date-input">
@@ -42,20 +43,23 @@
             <input type="text" id="exp-month" placeholder="MM" maxlength="2">
             <input type="text" id="exp-year" placeholder="YY" maxlength="2">
           </div>
+          <span class="error-message" id="date-error"></span>
         </div>
         <div class="form-input cvc-input">
           <p>CVC</p>
-          <input type="text" id="cvc" placeholder="123" maxlength="3">
+          <input type="text" id="cvc" placeholder="e.g. 123" maxlength="3">
+          <span class="error-message" id="cvc-error"></span>
         </div>
       </div>
-      <div class="confirm-btn">Confirm</div>
+      <div class="btn confirm-btn">Confirm</div>
+    </div>
+    <div class="success-form" style="display: none;">
+      <div class="img-logo"><img src="./images/icon-complete.svg"></div>
+      <p class="title">THANK YOU!</p>
+      <p class="detail">We've added your card details</p>
+      <div class="btn continue-btn">Continue</div>
     </div>
   </main>
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
+  <script src="main.js"></script>
 </body>
 </html>
